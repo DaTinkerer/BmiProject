@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+        <form> {% csrf_token %}
+            <input type="number" name="ft" min="0" placeholder="ft" v-model="height_ft">
+            <input type="number" name="in" min="0" placeholder="in" v-model="height_in">
+            <input type="number" name="lbs " min="0" placeholder="lbs" v-model="weight_lbs">
+            <input v-on:click.prevent="submitFormEng" type="submit" value="Calculate">
+        </form>
+    
+        <p>[[ bmi ]]</p>
+    
+        <form> {% csrf_token %}
+            <input type="number" name="cm" min="0" placeholder="cm" v-model="height_cm">
+            <input type="number" name="kg" min="0" placeholder="kg" v-model="weight_kg">
+            
+            <input v-on:click.prevent="submitFormMetric" type="submit" value="Calculate">
+        </form>
+    
+    </div>
+
+<script>
+
+    const app = new Vue({
+        delimiters: ['[[', ']]'],
+        el: '#app',
+        data: {
+            height_ft: null,
+            height_in: null,
+            weight_lbs: null,
+            height_cm: null,
+            weight_kg: null,
+
+            bmi: '',
+        },
+
+        methods: {
+
+            submitFormEng () {
+            this.bmi = ''
+            const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            axios({
+                method: "POST",
+                url: "http://localhost:8000/calculate/eng/",
+                headers: {'X-CSRFToken': csrftoken, 'Content-Type': 'application/json'},
+                data: {'height_ft': this.height_ft,
+                        'height_in': this.height_in,
+                        'weight_lbs': this.weight_lbs,},
+            }).then(response =>{
+                this.bmi = response.data['bmi'];
+            })
+
+        }
+
+        }
+    })
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    // var app = new Vue({
+    //     el: '#app',
+    //     delimiters: ['[[', ']]'],
+
+    //     data : {
+    //         message: ''
+    //     },
+
+    //     methods: {
+
+    //         async get_bmi () {
+    //             const response = await fetch('http://localhost:8000/calculate/');
+    //             this.message = await response.text();
+    //     }
+            
+    //     },
+
+        
+    // })
+
+
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+$primary-color: #4770FF;
+body {
+    margin: 0em;
+    height: 100vh;
+    background: $primary-color;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+
+.top-div {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    max-width: 366px;
+    margin: auto;
+    margin-top: 4em;
+    margin-bottom: -3em;
+    
+    p {
+        display: block;
+        background: #fff;
+        padding: 2.2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-radius: .4em;
+        &:hover {
+            cursor: pointer;
+        }
+        
+    }
+
+    #met-select {
+        padding-right: 2.5em;
+        padding-left: 2.5em;
+        background: rgb(211, 211, 211);
+    }
+    
+
+    
+}
+
+.form-sect {
+    margin-bottom: 10em;
+    background: #fff;
+    padding: 5em;
+    padding-top: 2em;
+    border-radius: 1em;
+    box-shadow: 1px 1px 3px #000000;
+    
+
+    max-width: 598px;
+    width: 100%;
+    margin: auto;
+    margin-top: 7em;
+
+    .form {
+        padding: 2em;
+    }
+
+
+
+    .upper-div {
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    input, label {
+        display: block;
+       
+    }
+
+    label {
+        margin-bottom: 1em;
+    }
+
+    input {
+        border: #AAAAAA solid 2px;
+        border-radius: .5em;
+        width: 7.5em;
+        height: 3em;
+        padding: .5em;
+        margin-bottom: 3em;
+
+        &:focus {
+        outline: none;
+        border-color: $primary-color;
+    
+        }
+    }
+
+    .submit-btn {
+        margin-top: 3em;
+        width: 6.5em;
+        height: 3.2em;
+        border: #fff;
+        color: #fff;
+        font-size: 18px;
+        background: $primary-color;
+
+        &:hover {
+            background: #2f4aac;
+            transition-duration: .2s;
+            
+            cursor: pointer;
+          }
+    }
+
+   
+}
+
+
+ #met-form-sect {
+     position: relative;
+     
+     display: none;
+     
+
+     
+ }
+
+ .results {
+     display: flex;
+     margin-top: 5em;
+     margin-left: 14em;
+     .words {
+         color: #fff;
+     }
+
+     #bmi {
+         margin-left: 1em;
+         
+         color: #fff;
+         
+     }
+
+
+ }

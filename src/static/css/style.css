@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+body {
+  margin: 0em;
+  height: 100vh;
+  background: #4770FF;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.top-div {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  max-width: 366px;
+  margin: auto;
+  margin-top: 4em;
+  margin-bottom: -3em;
+}
+
+.top-div p {
+  display: block;
+  background: #fff;
+  padding: 2.2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: .4em;
+}
+
+.top-div p:hover {
+  cursor: pointer;
+}
+
+.top-div #met-select {
+  padding-right: 2.5em;
+  padding-left: 2.5em;
+  background: lightgray;
+}
+
+.form-sect {
+  margin-bottom: 10em;
+  background: #fff;
+  padding: 5em;
+  padding-top: 2em;
+  border-radius: 1em;
+  box-shadow: 1px 1px 3px #000000;
+  max-width: 598px;
+  width: 100%;
+  margin: auto;
+  margin-top: 7em;
+}
+
+.form-sect .form {
+  padding: 2em;
+}
+
+.form-sect .upper-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-sect input, .form-sect label {
+  display: block;
+}
+
+.form-sect label {
+  margin-bottom: 1em;
+}
+
+.form-sect input {
+  border: #AAAAAA solid 2px;
+  border-radius: .5em;
+  width: 7.5em;
+  height: 3em;
+  padding: .5em;
+  margin-bottom: 3em;
+}
+
+.form-sect input:focus {
+  outline: none;
+  border-color: #4770FF;
+}
+
+.form-sect .submit-btn {
+  margin-top: 3em;
+  width: 6.5em;
+  height: 3.2em;
+  border: #fff;
+  color: #fff;
+  font-size: 18px;
+  background: #4770FF;
+}
+
+.form-sect .submit-btn:hover {
+  background: #2f4aac;
+  transition-duration: .2s;
+  cursor: pointer;
+}
+
+#met-form-sect {
+  position: relative;
+  display: none;
+}
+
+.results {
+  display: flex;
+  margin-top: 5em;
+  margin-left: 14em;
+}
+
+.results .words {
+  color: #fff;
+}
+
+.results #bmi {
+  margin-left: 1em;
+  color: #fff;
+}
+
+/*# sourceMappingURL=../css/style.css.map */

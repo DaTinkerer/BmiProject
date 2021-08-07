@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
-from .forms import Metic_UnitsForm, English_UnitsForm
+# from .forms import Metic_UnitsForm, English_UnitsForm
 from django.views.generic.base import TemplateView
 from pint import UnitRegistry
 from django.http import JsonResponse
@@ -8,6 +8,7 @@ import json
 def index(request):
     return render(request, 'calculator/index.html')
 
+# Process english units form
 def get_bmi_eng(request):
     
     ureg = UnitRegistry()
@@ -36,7 +37,7 @@ def get_bmi_eng(request):
     return render(request, 'calculator/index.html')
 
 
-
+# Process metric units form
 def get_bmi_metric(request):
     
     ureg = UnitRegistry()

@@ -107,19 +107,26 @@ body {
 
     .results {
       display: flex;
+      
       margin-top: 0.1em;
       margin-left: 2.5em;
-
+      
+    
       .words {
+        margin-right: 1em; 
         color: #000;
+        
       }
-
-      #bmi {
-        margin-left: 1em;
-
+    
+      .met-bmi .eng-bmi {
+        
+        margin-right: 5em;
         color: #000;
       }
     }
+    
+
+   
   }
   @media (max-width: 800px) {
     .form-sect {

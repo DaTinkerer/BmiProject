@@ -115,11 +115,12 @@ body {
 }
 
 .forms-div .form-sect .results .words {
+  margin-right: 1em;
   color: #000;
 }
 
-.forms-div .form-sect .results #bmi {
-  margin-left: 1em;
+.forms-div .form-sect .results .met-bmi .eng-bmi {
+  margin-right: 5em;
   color: #000;
 }
 

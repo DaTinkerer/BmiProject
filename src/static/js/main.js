@@ -26,7 +26,7 @@ let submitFormEng = event => {
                 'height_in': height_in,
                 'weight_lbs': weight_lbs,},
     }).then(response => {
-        document.getElementById('bmi').innerText = response.data['bmi'];
+        document.querySelector('.eng-bmi').innerText = response.data['bmi'];
         console.log(response.data['bmi']);
     }).catch(err => {
         console.log(err)
@@ -49,7 +49,7 @@ let submitFormMet = event => {
         data: {'height_cm': height_cm,
                 'weight_kg': weight_kg,},
     }).then(response =>{
-        document.getElementById('bmi').innerText = response.data['bmi'];
+        document.querySelector('.met-bmi').innerText = response.data['bmi'];
         console.log(response.data['bmi']);
     }).catch(err => {
         console.log(err)

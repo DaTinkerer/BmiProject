@@ -1,54 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-$primary-color: #4770FF;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+$primary-color: #4770ff;
 body {
-    margin: 0em;
-    height: 100vh;
-    background: $primary-color;
-    font-family: 'Montserrat', sans-serif;
-    
+  margin: 0em;
+  height: 100vh;
+  background: $primary-color;
+  font-family: "Montserrat", sans-serif;
 }
-
 
 .top-div {
-    display: flex;
-    justify-content: center;
-    justify-content: space-between;
-    max-width: 366px;
-    margin: auto;
-    margin-top: 4em;
-    margin-bottom: -3em;
-    
-    p {
-        display: block;
-        background: #fff;
-        padding: 2.2em;
-        padding-top: 1em;
-        padding-bottom: 1em;
-        border-radius: .4em;
-        &:hover {
-            cursor: pointer;
-        }
-        
-    }
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  max-width: 366px;
+  margin: auto;
+  margin-top: 4em;
+  margin-bottom: -3em;
 
-    #met-select {
-        padding-right: 2.5em;
-        padding-left: 2.5em;
-        background: rgb(211, 211, 211);
+  p {
+    display: block;
+    background: #66ff99;
+    padding: 2.2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 0.4em;
+    &:hover {
+      cursor: pointer;
     }
-    
+  }
 
-    
+  #met-select {
+    padding-right: 2.5em;
+    padding-left: 2.5em;
+    background: rgb(211, 211, 211);
+  }
+
+  @media (max-width: 400px) {
+      width: 300px;
+  }
+
+  @media (max-width: 300px) {
+    margin-left: 1em;
 }
-
-.form-sect {
+}
+.forms-div {
+  .form-sect {
     margin-bottom: 10em;
     background: #fff;
     padding: 5em;
     padding-top: 2em;
     border-radius: 1em;
     box-shadow: 1px 1px 3px #000000;
-    
 
     max-width: 598px;
     width: 100%;
@@ -56,85 +57,95 @@ body {
     margin-top: 7em;
 
     .form {
-        padding: 2em;
+      padding: 2em;
     }
-
-
 
     .upper-div {
-        display: flex;
-        justify-content: space-between;
-        
+      display: flex;
+      justify-content: space-between;
     }
 
-    input, label {
-        display: block;
-       
+    input,
+    label {
+      display: block;
     }
 
     label {
-        margin-bottom: 1em;
+      margin-bottom: 1em;
     }
 
     input {
-        border: #AAAAAA solid 2px;
-        border-radius: .5em;
-        width: 7.5em;
-        height: 3em;
-        padding: .5em;
-        margin-bottom: 3em;
+      border: #aaaaaa solid 2px;
+      border-radius: 0.5em;
+      width: 7.5em;
+      height: 3em;
+      padding: 0.5em;
+      margin-bottom: 3em;
 
-        &:focus {
+      &:focus {
         outline: none;
         border-color: $primary-color;
-    
-        }
+      }
     }
 
     .submit-btn {
-        margin-top: 3em;
-        width: 6.5em;
-        height: 3.2em;
-        border: #fff;
-        color: #fff;
-        font-size: 18px;
-        background: $primary-color;
+      margin-top: 3em;
+      width: 6.5em;
+      height: 3.2em;
+      border: #fff;
+      color: #fff;
+      font-size: 18px;
+      background: $primary-color;
 
-        &:hover {
-            background: #2f4aac;
-            transition-duration: .2s;
-            
-            cursor: pointer;
-          }
+      &:hover {
+        background: #2f4aac;
+        transition-duration: 0.2s;
+
+        cursor: pointer;
+      }
     }
 
-   
+    .results {
+      display: flex;
+      margin-top: 0.1em;
+      margin-left: 2.5em;
+
+      .words {
+        color: #000;
+      }
+
+      #bmi {
+        margin-left: 1em;
+
+        color: #000;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    .form-sect {
+        width: 300px;
+        padding-left: .1em;
+}
+.form-sect .upper-div {
+    display: block;
+    flex-wrap: wrap;
+}
+
+}
+@media (max-width: 400px) {
+    .form-sect {
+        width: 250px;
+        padding-left: .1em;
+        
+        
+}
+}
+}
+
+#met-form-sect {
+  position: relative;
+
+  display: none;
 }
 
 
- #met-form-sect {
-     position: relative;
-     
-     display: none;
-     
-
-     
- }
-
- .results {
-     display: flex;
-     margin-top: 5em;
-     margin-left: 14em;
-     .words {
-         color: #fff;
-     }
-
-     #bmi {
-         margin-left: 1em;
-         
-         color: #fff;
-         
-     }
-
-
- }

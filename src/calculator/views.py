@@ -33,7 +33,7 @@ def get_bmi_eng(request):
         
         
        
-        return JsonResponse({'bmi': bmi}, status=201)
+        return JsonResponse({'bmi': bmi}, status=200)
     return render(request, 'calculator/index.html')
 
 
@@ -55,7 +55,7 @@ def get_bmi_metric(request):
         
         
        
-        return JsonResponse({'bmi': bmi}, status=201)
+        return JsonResponse({'bmi': bmi}, status=200)
     return render(request, 'calculator/index.html')
     
 

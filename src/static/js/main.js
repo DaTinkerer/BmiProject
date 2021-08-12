@@ -20,7 +20,7 @@ let submitFormEng = event => {
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
     axios({
         method: "POST",
-        url: "http://localhost:8000/calculate/eng/",
+        url: "http://localhost:8000/eng/",
         headers: {'X-CSRFToken': csrftoken, 'Content-Type': 'application/json'},
         data: {'height_ft': height_ft,
                 'height_in': height_in,
@@ -44,7 +44,7 @@ let submitFormMet = event => {
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
     axios({
         method: "POST",
-        url: "http://localhost:8000/calculate/metric/",
+        url: "http://localhost:8000/metric/",
         headers: {'X-CSRFToken': csrftoken, 'Content-Type': 'application/json'},
         data: {'height_cm': height_cm,
                 'weight_kg': weight_kg,},
@@ -61,7 +61,7 @@ metric_form.addEventListener("submit", submitFormMet, true);
 
 // Hide eng form section and grey out the select button when I select metric form
 let deactivate = btn => btn.style.background = 'rgb(211, 211, 211)';
-let activate = btn => btn.style.background = '#fff';
+let activate = btn => btn.style.background = '#66ff99';
 let hide = sect => sect.style.display = 'none';
 let show = sect => sect.style.display = 'block';
 met_select.addEventListener("click", () => {
